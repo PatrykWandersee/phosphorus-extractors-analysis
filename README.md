@@ -1,10 +1,10 @@
 # Phosphorus Extractors Analysis
-
+**Tools:** Python, Pandas, Matplotlib
 A compact, reproducible data-analysis project inspired by the article **"Soil properties and pH of the extractors influence extraction and availability P in alkaline soils from the São Francisco Valley, Brazil"**.
 
 ## What this project does
 
-This repository uses a small sample dataset derived from the soil characterization table in the paper to explore:
+This repository uses a simplified dataset inspired by the soil characterization data presented in the paper:
 
 - how phosphorus values differ across extractors
 - how soil pH, exchangeable calcium, clay, and P-rem relate to extractor behavior
@@ -13,7 +13,6 @@ This repository uses a small sample dataset derived from the soil characterizati
 ## Repository structure
 
 ```text
-phosphorus-extractors-analysis-project/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
