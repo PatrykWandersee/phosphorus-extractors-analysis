@@ -29,9 +29,20 @@ def df_to_markdown(df: pd.DataFrame, digits: int = 4) -> str:
 
     for col in formatted.columns:
         if pd.api.types.is_numeric_dtype(formatted[col]):
-            formatted[col] = formatted[col].map(
-                lambda x: "" if pd.isna(x) else f"{x:.{digits}f}"
-            )
+            if "p_value" in col or col.endswith("_p") or col == "extractor_p_value":
+                formatted[col] = formatted[col].map(
+                    lambda x: "" if pd.isna(x) else f"{x:.2e}"
+                )
+            elif formatted[col].dropna().isin([0, 1]).all() and (
+                col.startswith("interaction_supported") or col.startswith("rank_")
+            ):
+                formatted[col] = formatted[col].map(
+                    lambda x: "" if pd.isna(x) else str(int(x))
+                )
+            else:
+                formatted[col] = formatted[col].map(
+                    lambda x: "" if pd.isna(x) else f"{x:.{digits}f}"
+                )
 
     return formatted.to_markdown(index=False)
 
