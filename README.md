@@ -1,76 +1,78 @@
 # Phosphorus Extractors Analysis
 
-**Tools:** Python, Pandas, Matplotlib
+Reproducible workflow for evaluating phosphorus extractors in alkaline soils from the Brazilian semiarid region.
 
-A compact, reproducible data-analysis project inspired by the article **"Soil properties and pH of the extractors influence extraction and availability P in alkaline soils from the São Francisco Valley, Brazil"**.
+This repository documents a scientific data-analysis pipeline derived from a greenhouse experiment with *Brachiaria decumbens* grown in soils with contrasting chemical and physical properties. The workflow compares four soil phosphorus extractors: Mehlich-1, Mehlich-3, anion exchange resin, and Olsen.
 
-## What this project does
+The original experimental dataset is not included in this repository because it is associated with thesis-derived analyses and potential future publications. Private data, tables, and figures are stored locally in ignored directories.
 
-This repository uses a simplified dataset inspired by the soil characterization data presented in the paper:
+## Scientific objective
 
-- how phosphorus values differ across extractors
-- how soil pH, exchangeable calcium, clay, and P-rem relate to extractor behavior
-- why **Mehlich-3** stands out as a more stable option in alkaline soils
+The main goal is to evaluate how well different soil P extractors reflect plant response under alkaline soil conditions.
+
+The workflow distinguishes between:
+
+1. **Extractor recovery** — how much P each method extracts as applied P increases.
+2. **Biological prediction** — how well extracted P predicts plant P uptake and dry matter production.
+3. **Soil-specific behavior** — whether extractor-response relationships vary among soils.
+
+## Current working interpretation
+
+Private analyses indicate that Mehlich-1 shows the greatest overall P recovery. However, higher recovery does not necessarily imply better prediction of plant response.
+
+When soil effects are controlled, Mehlich-3 is the most consistent predictor of plant P uptake, especially total plant P uptake. Resin also performs well in sensitivity analyses, while Olsen shows strong within-soil correlations and relevant soil-specific behavior.
+
+For this reason, plant P uptake is treated as the primary biological response in the current workflow. Dry matter production is retained as a complementary agronomic response.
 
 ## Repository structure
 
 ```text
-├── README.md
-├── requirements.txt
-├── .gitignore
+phosphorus-extractors-analysis/
 ├── data/
-│   └── sample_phosphorus_data.csv
+│   ├── sample/
+│   └── private/      # ignored; not tracked
+├── figures/
+│   └── private/      # ignored; not tracked
 ├── notebooks/
-│   ├── phosphorus_extractors_analysis.ipynb
-│   └── phosphorus_extractors_analysis.py
-└── figures/
+├── scripts/
+├── tables/
+│   └── private/      # ignored; not tracked
+├── requirements.txt
+└── README.md
 ```
 
-## Dataset
+## Methods represented
 
-The sample dataset includes six soils used in the paper:
+The private workflow currently includes:
 
-- RY
-- RQ
-- PVA1
-- PVA2
-- LVA
-- V
+- data validation and cleaning;
+- Pearson and Spearman correlations;
+- within-soil correlation analysis;
+- extractor recovery-rate estimation;
+- plant response model diagnostics;
+- RStudent-based influence screening;
+- soil fixed-effect models;
+- soil-specific interaction models;
+- sensitivity analysis with and without influential observations;
+- private diagnostic figures and synthesis reports.
 
-Variables included:
+## Privacy note
 
-- soil pH
-- exchangeable Ca
-- clay
-- P-rem
-- phosphorus extracted by Mehlich-1, Mehlich-3, AER, and Olsen
+This repository does not publish the original experimental data. Files under `data/private/`, `tables/private/`, and `figures/private/` are intentionally excluded from version control.
 
-## How to run
+The scripts document the analytical logic, but full reproduction of the private results requires access to the original local dataset.
 
-Install the dependencies:
+## Planned additions
 
-```bash
-pip install -r requirements.txt
-```
+Planned public-facing additions include:
 
-Run the script:
+- a synthetic demonstration dataset;
+- a reproducible example notebook;
+- publication-style figures using synthetic data;
+- documentation explaining the difference between extractor recovery and biological prediction.
 
-```bash
-python notebooks/phosphorus_extractors_analysis.py
-```
+## Author
 
-Or open the notebook in Jupyter / Google Colab.
-
-## Key takeaway
-
-The paper concludes that **exchangeable calcium and soil pH influence phosphorus extraction more than clay and P-rem**, and that **Mehlich-3 showed high performance in predicting P availability in alkaline environments**.
-
-## Why this repo is useful
-
-This is not meant to reproduce the full paper. It is a portfolio-style project designed to show:
-
-- clean project organization
-- scientific data handling in Python
-- exploratory analysis
-- concise interpretation of results
-- a reproducible workflow that can later be expanded into regressions, benchmarking, and richer visualization
+**Patryk Ramon Graciano Rosa Wandersee**  
+Agronomist | MSc and PhD in Soil Science  
+Research interests: soil fertility, phosphorus dynamics, soil quality, plant-soil relationships, and applied data analysis.
