@@ -4,7 +4,7 @@ Reproducible workflow for evaluating phosphorus extractors in alkaline soils fro
 
 This repository documents a scientific data-analysis pipeline derived from a greenhouse experiment with *Brachiaria decumbens* grown in soils with contrasting chemical and physical properties. The workflow compares four soil phosphorus extractors: Mehlich-1, Mehlich-3, anion exchange resin, and Olsen.
 
-The original experimental dataset is not included in this repository because it is associated with thesis-derived analyses and potential future publications. Private data, tables, figures, and synthesis reports are stored locally in ignored directories.
+The original experimental dataset is not included in this repository because it is associated with master's dissertation-derived analyses and potential future publications. Private data, tables, figures, and synthesis reports are stored locally in ignored directories.
 
 ## Scientific objective
 
