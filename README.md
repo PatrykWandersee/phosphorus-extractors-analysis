@@ -56,7 +56,7 @@ phosphorus-extractors-analysis/
 │   └── private/          # ignored; not tracked
 ├── requirements.txt
 └── README.md
-...
+```
 
 ## Privacy note
 
