@@ -16,13 +16,11 @@ The workflow distinguishes between:
 2. **Biological prediction** — how well extracted P predicts plant P uptake and dry matter production.
 3. **Soil-specific behavior** — whether extractor-response relationships vary among soils.
 
-## Current working interpretation
+## Current workflow
 
-Private analyses indicate that Mehlich-1 shows the greatest overall P recovery. However, higher recovery does not necessarily imply better prediction of plant response.
+The current private workflow evaluates extractor recovery, plant P uptake prediction, dry matter response, soil-specific extractor behavior, and sensitivity to influential observations.
 
-When soil effects are controlled, Mehlich-3 is the most consistent predictor of plant P uptake, especially total plant P uptake. Resin also performs well in sensitivity analyses, while Olsen shows strong within-soil correlations and relevant soil-specific behavior.
-
-For this reason, plant P uptake is treated as the primary biological response in the current workflow. Dry matter production is retained as a complementary agronomic response.
+Interpretive results derived from the original dataset are being kept private while publication and manuscript options are assessed. Public-facing examples using synthetic or anonymized data may be added later.
 
 ## Repository structure
 

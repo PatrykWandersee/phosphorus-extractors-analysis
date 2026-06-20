@@ -2,13 +2,11 @@ data/private/
 figures/private/
 tables/private/
 manuscript/private/
-
 *.xlsx
 *.xls
 *.xlsm
 *.ods
 ~$*
-
 .DS_Store
 __pycache__/
 .venv/
